@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rkjk1sEV4o4zNCR6KmIu8UqlffAULrzbNF7j3vKPtMJ9ePOkatoj1KpSFQfL3UIMRnHwQ3my1aUiXwg19dDmEw==",
+  "success": true,
+  "projectFilePath": "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKata.Domain.Service\\RPGCombatKata.Domain.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
