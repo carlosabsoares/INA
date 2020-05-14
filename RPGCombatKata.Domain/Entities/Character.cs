@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RPGCombatKata.Domain.Entities
 {
-    public class Characters
+    public class Character
     {
         public string Name { get; set; }
 
@@ -12,7 +12,7 @@ namespace RPGCombatKata.Domain.Entities
         public int Level { get; private set; }
         public bool Alive { get; private set; }
 
-        public Characters()
+        public Character()
         {
             Health = 1000;
             Alive = true;

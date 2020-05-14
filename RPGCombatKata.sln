@@ -23,15 +23,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{2F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{EC5A0DDC-D132-4466-B1E2-CFCE5971938A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKata.Domain", "RPGCombatKata.Domain\RPGCombatKata.Domain.csproj", "{93D26871-6134-46C2-A4E8-99131A5D9B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKata.Domain", "RPGCombatKata.Domain\RPGCombatKata.Domain.csproj", "{93D26871-6134-46C2-A4E8-99131A5D9B1A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{981A5740-6DE0-43F1-9FA1-E8AC6996ED57}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{325F498F-AFD3-4D37-BB40-35BF19179F34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKata.Domain.Core", "RPGCombatKata.Domain.Core\RPGCombatKata.Domain.Core.csproj", "{5C88E44E-0F05-4714-A2BD-917FF11CCEEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKata.Domain.Core", "RPGCombatKata.Domain.Core\RPGCombatKata.Domain.Core.csproj", "{5C88E44E-0F05-4714-A2BD-917FF11CCEEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKata.Domain.Service", "RPGCombatKata.Domain.Service\RPGCombatKata.Domain.Service.csproj", "{ED258672-648C-46D3-AD90-3129F0DD7790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKata.Domain.Service", "RPGCombatKata.Domain.Service\RPGCombatKata.Domain.Service.csproj", "{ED258672-648C-46D3-AD90-3129F0DD7790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKataTest.Domain", "RPGCombatKataTest.Domain\RPGCombatKataTest.Domain.csproj", "{3A78C6C9-B18A-4276-9AD8-21D725402699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKataTest.Domain.Core", "RPGCombatKataTest.Domain.Core\RPGCombatKataTest.Domain.Core.csproj", "{965D8478-4652-49E3-9C87-0420BC9E07E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKataTest.Domain.Service", "RPGCombatKataTest.Domain.Service\RPGCombatKataTest.Domain.Service.csproj", "{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{ED258672-648C-46D3-AD90-3129F0DD7790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED258672-648C-46D3-AD90-3129F0DD7790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED258672-648C-46D3-AD90-3129F0DD7790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A78C6C9-B18A-4276-9AD8-21D725402699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A78C6C9-B18A-4276-9AD8-21D725402699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A78C6C9-B18A-4276-9AD8-21D725402699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A78C6C9-B18A-4276-9AD8-21D725402699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965D8478-4652-49E3-9C87-0420BC9E07E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965D8478-4652-49E3-9C87-0420BC9E07E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965D8478-4652-49E3-9C87-0420BC9E07E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965D8478-4652-49E3-9C87-0420BC9E07E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +87,9 @@ Global
 		{325F498F-AFD3-4D37-BB40-35BF19179F34} = {A5FC02F6-9C7B-4E2B-B00B-53B77502ADA9}
 		{5C88E44E-0F05-4714-A2BD-917FF11CCEEA} = {5B93542E-E8A9-4821-A3BF-1546CF761894}
 		{ED258672-648C-46D3-AD90-3129F0DD7790} = {5B93542E-E8A9-4821-A3BF-1546CF761894}
+		{3A78C6C9-B18A-4276-9AD8-21D725402699} = {2F4292F1-873E-431C-B77E-5969ED55BBAC}
+		{965D8478-4652-49E3-9C87-0420BC9E07E1} = {2F4292F1-873E-431C-B77E-5969ED55BBAC}
+		{77EFFAB3-DAEE-4845-A348-68FBFE484C8C} = {2F4292F1-873E-431C-B77E-5969ED55BBAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {503CEA8D-205C-44F5-A1A2-EDD759A58680}
