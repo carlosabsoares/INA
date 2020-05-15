@@ -25,6 +25,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "RPGCombatKata.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RPGCombatKata.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPGCombatKata.Domain.dll": {}
+        }
+      },
+      "RPGCombatKata.Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "RPGCombatKata.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RPGCombatKata.Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPGCombatKata.Domain.Core.dll": {}
+        }
       }
     }
   },
@@ -171,11 +194,23 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "RPGCombatKata.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RPGCombatKata.Domain/RPGCombatKata.Domain.csproj",
+      "msbuildProject": "../RPGCombatKata.Domain/RPGCombatKata.Domain.csproj"
+    },
+    "RPGCombatKata.Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../RPGCombatKata.Domain.Core/RPGCombatKata.Domain.Core.csproj",
+      "msbuildProject": "../RPGCombatKata.Domain.Core/RPGCombatKata.Domain.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "RPGCombatKata.Domain >= 1.0.0",
+      "RPGCombatKata.Domain.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -207,7 +242,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKata.Domain.Core\\RPGCombatKata.Domain.Core.csproj": {
+              "projectPath": "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKata.Domain.Core\\RPGCombatKata.Domain.Core.csproj"
+            },
+            "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKata.Domain\\RPGCombatKata.Domain.csproj": {
+              "projectPath": "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKata.Domain\\RPGCombatKata.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

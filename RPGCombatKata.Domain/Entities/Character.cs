@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Text;
 
 namespace RPGCombatKata.Domain.Entities
@@ -19,5 +20,30 @@ namespace RPGCombatKata.Domain.Entities
             Level = 1;
         }
 
+        public void DownHealth(int down)
+        {
+
+            if ((Health-=down) > 0)
+            {
+                Health -= down;
+            }
+            else
+            {
+                Health = 0;
+                Alive = false;
+            }
+        }
+
+        public void UpHealth(int down)
+        {
+            if ((Health += down) > 1000)
+            {
+                Health += down;
+            }
+            else
+            {
+                Health = 1000;
+            }
+        }
     }
 }

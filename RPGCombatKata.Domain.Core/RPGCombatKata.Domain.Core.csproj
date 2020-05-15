@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
-    <Folder Include="Core\" />
+    <ProjectReference Include="..\RPGCombatKata.Domain\RPGCombatKata.Domain.csproj" />
   </ItemGroup>
 
 </Project>
