@@ -83,7 +83,7 @@ namespace RPGCombatKata.Domain.Service
         {
             if (MakeAttackValidate(powerful, opponent))
             {
-                opponent.DownHealth(powerful);
+                opponent.DownHealth(VerifyDamageAttack(powerful, opponent));
             }
             else
             {
@@ -92,5 +92,27 @@ namespace RPGCombatKata.Domain.Service
 
             }
         }
+
+        private int VerifyDamageAttack(int powerful, Character opponent)
+        {
+
+            int _demagePowerful = powerful;
+
+            var _levelDiff = opponent.Level - _character.Level;
+
+            if(_levelDiff > 4)
+            {
+                _demagePowerful = (powerful / 2);
+            }
+
+            if (_levelDiff < 4 && _levelDiff < 0 )
+            {
+                _demagePowerful = (powerful * 2);
+            }
+
+            return _demagePowerful;
+
+        }
+
     }
 }

@@ -71,8 +71,7 @@ namespace RPGCombatKataTest.Domain.Service
             var _potenciaAtaque = 10;
 
             var _otherCharacter = new Character() { Name = otherName };
-
-
+            
             var serviceCharacter = new ServiceCharacter(_character);
 
             serviceCharacter.GetAttack(_potenciaAtaque, _otherCharacter);
@@ -211,8 +210,53 @@ namespace RPGCombatKataTest.Domain.Service
                 Assert.AreNotEqual(_character.Alive, true);
 
             }
+        }
 
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void validaAtaqueFeitoPersonagemPorOutroPersonagemNivel5VezesMaior()
+        {
+            string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
+
+            var _otherCharacter = new Character() { Name = otherName };
+            var _newHealth = 5000;
+
+            _otherCharacter.UpHealth(_newHealth);
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            serviceCharacter.MakeAttack(_potenciaAtaque, _otherCharacter);
+
+            Assert.AreEqual(_otherCharacter.Health,((_originalHealt + _newHealth) - (_potenciaAtaque/2)));
+            Assert.AreEqual(_character.Level, _originalLevel);
+            Assert.AreEqual(_character.Alive, true);
+            Assert.AreNotEqual(_character.Alive, false);
 
         }
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void validaAtaqueFeitoPersonagemPorOutroPersonagemNivel5VezesMenor()
+        {
+            string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
+
+            var _otherCharacter = new Character() { Name = otherName };
+            var _newHealth = 5000;
+
+            _character.UpHealth(_newHealth);
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            serviceCharacter.MakeAttack(_potenciaAtaque, _otherCharacter);
+
+            Assert.AreEqual(_otherCharacter.Health, ( _originalHealt - (_potenciaAtaque * 2)));
+            Assert.AreEqual(_otherCharacter.Level, _originalLevel);
+            Assert.AreEqual(_otherCharacter.Alive, true);
+            Assert.AreNotEqual(_otherCharacter.Alive, false);
+
+        }
+
     }
 }

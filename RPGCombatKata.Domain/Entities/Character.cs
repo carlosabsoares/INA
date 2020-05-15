@@ -47,10 +47,22 @@ namespace RPGCombatKata.Domain.Entities
 
         public void DownHealth(int down)
         {
+            int _varCalculo = 0;
+
+            if (down<1000)
+            {
+                _varCalculo = (down + _initialHealth);
+            }
+            else
+            {
+                _varCalculo = down;
+            }
+
             if ((Health - down) > 0)
             {
                 Health -= down;
-                Level = (Health < 1000)? 1: (int)(Math.Round(Convert.ToDecimal((Health / down))));
+                //Level = (Health < 1000)? 1: (int)(Math.Round(Convert.ToDecimal((Health / down))));
+                Level = (Health < 1000) ? 1 : (int)(Math.Round(Convert.ToDecimal((Health / _varCalculo))));
 
             }
             else
