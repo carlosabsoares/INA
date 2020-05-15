@@ -33,11 +33,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKata.Domain.Core",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKata.Domain.Service", "RPGCombatKata.Domain.Service\RPGCombatKata.Domain.Service.csproj", "{ED258672-648C-46D3-AD90-3129F0DD7790}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKataTest.Domain", "RPGCombatKataTest.Domain\RPGCombatKataTest.Domain.csproj", "{3A78C6C9-B18A-4276-9AD8-21D725402699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKataTest.Domain", "RPGCombatKataTest.Domain\RPGCombatKataTest.Domain.csproj", "{3A78C6C9-B18A-4276-9AD8-21D725402699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKataTest.Domain.Core", "RPGCombatKataTest.Domain.Core\RPGCombatKataTest.Domain.Core.csproj", "{965D8478-4652-49E3-9C87-0420BC9E07E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKataTest.Domain.Core", "RPGCombatKataTest.Domain.Core\RPGCombatKataTest.Domain.Core.csproj", "{965D8478-4652-49E3-9C87-0420BC9E07E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCombatKataTest.Domain.Service", "RPGCombatKataTest.Domain.Service\RPGCombatKataTest.Domain.Service.csproj", "{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCombatKataTest.Domain.Service", "RPGCombatKataTest.Domain.Service\RPGCombatKataTest.Domain.Service.csproj", "{77EFFAB3-DAEE-4845-A348-68FBFE484C8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{089EE8DD-71A1-4484-9D28-17CBA6B2442E}"
+	ProjectSection(SolutionItems) = preProject
+		Orientacao.txt = Orientacao.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

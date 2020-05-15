@@ -1,0 +1,7 @@
+Observações
+	Level
+	* A cada mil pontos de energia, o personagem sobe um nível
+
+	Cura
+	* Para que o personagem se cure o nivel de energia ( Health ) deve ser superior a 1000;
+	* Quando o usuário se cura, ele perde um Level ( nível ) e a sua energia ( Health ) fica com o valor de 1000;

@@ -9,7 +9,9 @@
     ".NETStandard,Version=v2.0/": {
       "RPGCombatKata.Domain.Service/1.0.0": {
         "dependencies": {
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "RPGCombatKata.Domain": "1.0.0",
+          "RPGCombatKata.Domain.Core": "1.0.0"
         },
         "runtime": {
           "RPGCombatKata.Domain.Service.dll": {}
@@ -19,6 +21,19 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "RPGCombatKata.Domain/1.0.0": {
+        "runtime": {
+          "RPGCombatKata.Domain.dll": {}
+        }
+      },
+      "RPGCombatKata.Domain.Core/1.0.0": {
+        "dependencies": {
+          "RPGCombatKata.Domain": "1.0.0"
+        },
+        "runtime": {
+          "RPGCombatKata.Domain.Core.dll": {}
         }
       }
     }
@@ -42,6 +57,16 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "RPGCombatKata.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RPGCombatKata.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

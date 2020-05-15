@@ -7,3 +7,6 @@ D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\R
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Core\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Core.dll
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Core\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Core.pdb
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Core\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Core.csprojAssemblyReference.cache
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Core\bin\Debug\netstandard2.0\RPGCombatKata.Domain.dll
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Core\bin\Debug\netstandard2.0\RPGCombatKata.Domain.pdb
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Core\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Core.csproj.CopyComplete

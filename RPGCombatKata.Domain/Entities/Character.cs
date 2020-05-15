@@ -13,37 +13,73 @@ namespace RPGCombatKata.Domain.Entities
         public int Level { get; private set; }
         public bool Alive { get; private set; }
 
+        private readonly int _initialHealth = 1000;
+        private readonly int _initialLevel = 1;
+        private readonly bool _alive = true;
+
+
         public Character()
         {
-            Health = 1000;
-            Alive = true;
-            Level = 1;
+            Health = _initialHealth;
+            Alive = _alive;
+            Level = _initialLevel;
+        }
+
+        //public void DownHealth(int down)
+        //{
+        //    Health -= down;
+        //}
+
+        //public void UpHealth(int up)
+        //{
+        //    Health -= up;
+        //}
+
+        public void DownLevel(int down)
+        {
+            Level -= down;
+        }
+
+        public void UpLevel(int up)
+        {
+            Level += up;
         }
 
         public void DownHealth(int down)
         {
-
-            if ((Health-=down) > 0)
+            if ((Health - down) > 0)
             {
                 Health -= down;
+                Level = (Health < 1000)? 1: (int)(Math.Round(Convert.ToDecimal((Health / down))));
+
             }
             else
             {
                 Health = 0;
+                Level = 0;
                 Alive = false;
             }
         }
 
-        public void UpHealth(int down)
+        public void UpHealth(int up)
         {
-            if ((Health += down) > 1000)
+            Health += up;
+
+            if (Health > _initialHealth)
             {
-                Health += down;
-            }
-            else
-            {
-                Health = 1000;
+                Level = (int)(Math.Round(Convert.ToDecimal((Health / _initialHealth)))); 
             }
         }
+
+        public void BeCure()
+        {
+
+            if (Health > _initialHealth && Level > _initialLevel)
+            {
+                Level --;
+                Health = _initialHealth;
+            }
+        }
+
     }
 }

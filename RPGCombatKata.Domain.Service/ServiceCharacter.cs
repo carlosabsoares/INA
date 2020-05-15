@@ -16,18 +16,81 @@ namespace RPGCombatKata.Domain.Service
             _character = character;
         }
 
-        public void GetAttack(int demage)
+        private bool CureValidate(Character character)
         {
-            _character.DownHealth(demage);
+            bool _retorno = false;
+
+            if((_character == character) && character.Alive && character.Level > 1)
+                _retorno = true;
+
+            return _retorno;
+        }
+
+        public bool GetAttackValidate(int demage, Character opponent)
+        {
+
+            bool _retorno = false;
+
+            if (!(_character == opponent))
+                _retorno = true;
+
+            return _retorno;
+
+        }
+
+        public bool MakeAttackValidate(int demage, Character opponent)
+        {
+
+            bool _retorno = false;
+
+            if (!(_character == opponent))
+                _retorno = true;
+
+            return _retorno;
+
+        }
+
+        public void BeCure(Character character)
+        {
+
+            if (CureValidate(character))
+            {
+                _character.BeCure();
+            }
+            else
+            {
+                if(!character.Alive)
+                    throw new Exception("We cant cure a dead character.");
+
+                if(!(_character == character))
+                    throw new Exception("One character cant heal another character.");
+            }
+        }
+
+        public void GetAttack(int demage, Character opponent)
+        {
+            if (GetAttackValidate(demage, opponent))
+            {
+                _character.DownHealth(demage);
+            }
+            else
+            {
+                MakeAttack(demage, opponent);
+            }
         }
 
         public void MakeAttack(int powerful, Character opponent)
         {
-            if (!(_character == opponent))
+            if (MakeAttackValidate(powerful, opponent))
             {
                 opponent.DownHealth(powerful);
             }
+            else
+            {
+                if (_character == opponent)
+                    throw new Exception("You cant attack yourself.");
 
+            }
         }
     }
 }

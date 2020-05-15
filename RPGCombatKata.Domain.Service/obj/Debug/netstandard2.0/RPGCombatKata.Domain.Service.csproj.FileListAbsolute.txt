@@ -7,3 +7,8 @@ D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\R
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Service.AssemblyInfo.cs
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Service.dll
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Service.pdb
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\bin\Debug\netstandard2.0\RPGCombatKata.Domain.Core.dll
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\bin\Debug\netstandard2.0\RPGCombatKata.Domain.dll
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\bin\Debug\netstandard2.0\RPGCombatKata.Domain.Core.pdb
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\bin\Debug\netstandard2.0\RPGCombatKata.Domain.pdb
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain.Service\obj\Debug\netstandard2.0\RPGCombatKata.Domain.Service.csproj.CopyComplete
