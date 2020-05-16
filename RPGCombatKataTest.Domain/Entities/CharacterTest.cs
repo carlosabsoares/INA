@@ -1,20 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RPGCombatKata.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using RPGCombatKata.Domain.Enums;
 
 namespace RPGCombatKataTest.Domain.Entities
 {
     [TestClass]
     public class CharacterTest
     {
-
         [TestMethod]
         [TestCategory("Character")]
         public void Valida_Criacao_Character()
         {
-
             string _name = "Carlos";
 
             int _health = 1000;
@@ -28,8 +24,8 @@ namespace RPGCombatKataTest.Domain.Entities
             Assert.AreEqual(character.Level, _level);
             Assert.AreEqual(character.Alive, _alive);
             Assert.AreNotEqual(character.Alive, false);
-
+            Assert.AreEqual(character.KindOfFighter, TypeOfFighter.Melee);
+            Assert.AreNotEqual(character.KindOfFighter, TypeOfFighter.Ranged);
         }
-
     }
 }

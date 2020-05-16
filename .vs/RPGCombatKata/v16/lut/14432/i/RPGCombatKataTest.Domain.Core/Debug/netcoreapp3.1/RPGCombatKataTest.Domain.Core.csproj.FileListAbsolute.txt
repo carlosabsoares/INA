@@ -1,0 +1,6 @@
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\b\RPGCombatKataTest.Domain.Core\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Core.deps.json
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\b\RPGCombatKataTest.Domain.Core\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Core.dll
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Core\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Core.AssemblyInfoInputs.cache
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Core\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Core.AssemblyInfo.cs
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Core\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Core.csproj.CopyComplete
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Core\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Core.dll
