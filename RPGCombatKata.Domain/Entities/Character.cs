@@ -1,5 +1,6 @@
 ﻿using RPGCombatKata.Domain.Enums;
 using System;
+using System.Collections.Generic;
 
 namespace RPGCombatKata.Domain.Entities
 {
@@ -11,8 +12,11 @@ namespace RPGCombatKata.Domain.Entities
         public int Health { get; private set; }
         public int Level { get; private set; }
         public bool Alive { get; private set; }
+        public IList<Faction> Factions { get; }
 
-        public TypeOfFighter KindOfFighter  { get; private set; }
+
+
+        public TypeOfFighter KindOfFighter { get; private set; }
 
         private readonly int _initialHealth = 1000;
         private readonly int _initialLevel = 1;
@@ -20,14 +24,25 @@ namespace RPGCombatKata.Domain.Entities
         private readonly int _initialPosition = 1;
 
 
-        public Character(TypeOfFighter typeOfFighter = TypeOfFighter.Melee )
+        public Character(TypeOfFighter typeOfFighter = TypeOfFighter.Melee)
         {
             Health = _initialHealth;
             Alive = _alive;
             Level = _initialLevel;
             KindOfFighter = typeOfFighter;
             Position = _initialPosition;
+            Factions = new List<Faction>();
 
+        }
+
+        public void JoinFaction(Faction faction)
+        {
+            Factions.Add(faction);
+        }
+
+        public void LeaveFaction(Faction faction)
+        {
+            Factions.Remove(faction);
         }
 
         public void DownLevel(int down)
@@ -60,10 +75,15 @@ namespace RPGCombatKata.Domain.Entities
             }
             else
             {
-                Health = 0;
-                Level = 0;
-                Alive = false;
+                Dead();
             }
+        }
+
+        private void Dead()
+        {
+            Health = 0;
+            Level = 0;
+            Alive = false;
         }
 
         public void UpHealth(int up)
