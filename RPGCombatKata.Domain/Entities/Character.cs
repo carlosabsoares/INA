@@ -13,6 +13,7 @@ namespace RPGCombatKata.Domain.Entities
         public int Level { get; private set; }
         public bool Alive { get; private set; }
         public IList<Faction> Factions { get; }
+        public int InitialHealth { get; private set; }
 
 
 
@@ -32,6 +33,8 @@ namespace RPGCombatKata.Domain.Entities
             KindOfFighter = typeOfFighter;
             Position = _initialPosition;
             Factions = new List<Faction>();
+
+            InitialHealth = _initialHealth;
 
         }
 
@@ -95,14 +98,7 @@ namespace RPGCombatKata.Domain.Entities
                 Level = (int)(Math.Round(Convert.ToDecimal((Health / _initialHealth))));
             }
         }
-
-        public void BeCure()
-        {
-            if (Health > _initialHealth && Level > _initialLevel)
-            {
-                Level--;
-                Health = _initialHealth;
-            }
-        }
     }
+
+
 }

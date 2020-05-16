@@ -1,6 +1,7 @@
 ﻿using RPGCombatKata.Domain.Core.Interface.Servicos;
 using RPGCombatKata.Domain.Entities;
 using System;
+using System.Linq;
 
 namespace RPGCombatKata.Domain.Service
 {
@@ -20,6 +21,9 @@ namespace RPGCombatKata.Domain.Service
             if ((_character == character) && character.Alive && character.Level > 1)
                 _retorno = true;
 
+            if ((ValidateFaction(character)) && _character.Alive && _character.Level > 1)
+                _retorno = true;
+
             return _retorno;
         }
 
@@ -37,10 +41,27 @@ namespace RPGCombatKata.Domain.Service
         {
             bool _retorno = false;
 
-            if ((_character != opponent) && ValidatePositionAttack(opponent))
+            if ((_character != opponent) && 
+                ValidatePositionAttack(opponent) &&
+                (!ValidateFaction(opponent))
+                )
                 _retorno = true;
 
             return _retorno;
+        }
+
+        private bool ValidateFaction(Character opponent)
+        {
+
+            bool _retorno = false;
+
+            var teste = opponent.Factions.Where( x=> _character.Factions.Any( c => c.Name == x.Name));
+
+            if (teste.Count() > 0)
+                _retorno = true;
+
+            return _retorno;
+
         }
 
         private bool ValidatePositionAttack(Character opponent)
@@ -59,7 +80,17 @@ namespace RPGCombatKata.Domain.Service
         {
             if (ValidateCure(character))
             {
-                _character.BeCure();
+                if(_character == character)
+                {
+                    character.DownHealth(character.InitialHealth);
+                }
+                else
+                {
+                    character.UpHealth(character.InitialHealth);
+                    _character.DownHealth(character.InitialHealth);
+                }
+                    
+
             }
             else
             {
@@ -96,6 +127,9 @@ namespace RPGCombatKata.Domain.Service
 
                 if(!ValidatePositionAttack(opponent))
                     throw new Exception("Opponent out of reach.");
+
+                if (!ValidateFaction(opponent))
+                    throw new Exception("You cant attack yours allies.");
 
             }
         }

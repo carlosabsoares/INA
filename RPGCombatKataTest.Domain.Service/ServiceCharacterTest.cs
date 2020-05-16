@@ -32,6 +32,8 @@ namespace RPGCombatKataTest.Domain.Service
             Assert.AreEqual(_otherCharacter.Alive, true);
             Assert.AreNotEqual(_otherCharacter.Alive, false);
 
+            Assert.AreNotEqual(_otherCharacter.Factions, _character.Factions);
+
             Assert.AreEqual(_otherCharacter.KindOfFighter, TypeOfFighter.Melee);
         }
 
@@ -334,6 +336,117 @@ namespace RPGCombatKataTest.Domain.Service
             Assert.AreNotEqual(_otherCharacter.Alive, false);
             Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Ranged);
 
+        }
+
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void validaAtaqueFeitoPersonagemContraOutroPersonagemDiferenteFacao()
+        {
+            string _nameFaction = "Warriors";
+            string _otherNameFaction = "Raptors";
+
+            _character.JoinFaction(new IFaction(_nameFaction));
+
+            string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
+
+            var _otherCharacter = new Character() { Name = otherName };
+
+            _otherCharacter.JoinFaction(new IFaction(_nameFaction));
+            _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
+
+            _otherCharacter.LeaveFaction(new IFaction(_otherNameFaction));
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            try
+            {
+                serviceCharacter.MakeAttack(_potenciaAtaque, _otherCharacter);
+            }
+            catch (Exception ex)
+            {
+
+                Assert.IsNotNull(ex);
+                AssertFailedException.Equals(ex.Message, "You cant attack yours allies.");
+                Assert.AreEqual(_otherCharacter.Health, _originalHealt);
+                Assert.AreEqual(_otherCharacter.Level, _originalLevel);
+                Assert.AreEqual(_otherCharacter.Alive, true);
+                Assert.AreNotEqual(_otherCharacter.Alive, false);
+                Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
+                Assert.AreEqual(_otherCharacter.KindOfFighter, TypeOfFighter.Melee);
+            }
+        }
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void validaAtaqueFeitoPersonagemContraOutroPersonagemMesmaFacao()
+        {
+            string _nameFaction = "Warriors";
+            string _otherNameFaction = "Raptors";
+
+            _character.JoinFaction(new IFaction(_nameFaction));
+
+            string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
+
+            var _otherCharacter = new Character() { Name = otherName };
+            _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            serviceCharacter.MakeAttack(_potenciaAtaque, _otherCharacter);
+
+            Assert.AreEqual(_otherCharacter.Health, (_character.Health - _potenciaAtaque));
+            Assert.AreEqual(_otherCharacter.Name, otherName);
+            Assert.AreEqual(_otherCharacter.Alive, true);
+            Assert.AreNotEqual(_otherCharacter.Alive, false);
+
+            Assert.AreNotEqual(_otherCharacter.Factions, _character.Factions);
+
+            Assert.AreEqual(_otherCharacter.KindOfFighter, TypeOfFighter.Melee);
+        }
+
+        //[TestMethod]
+        //[TestCategory("ServiceCharacter")]
+        //public void validaCuraFeitaPersonagemParaOutroComSucesso()
+        //{
+
+        //    string _nameFaction = "Warriors";
+        //    string _otherNameFaction = "Raptors";
+
+        //    _character.JoinFaction(new IFaction(_nameFaction));
+
+        //    string otherName = "OtherPerson";
+        //    var _potenciaAtaque = 10;
+
+        //    var _otherCharacter = new Character() { Name = otherName };
+        //    _otherCharacter.JoinFaction(new IFaction(_nameFaction));
+
+        //    var serviceCharacter = new ServiceCharacter(_character);
+
+        //    var _newHealth = 1000;
+
+        //    _character.UpHealth(_newHealth);
+
+
+        //    serviceCharacter.BeCure(_otherCharacter);
+
+        //    Assert.AreEqual(_character.Health, _originalHealt);
+        //    Assert.AreEqual(_character.Level, _originalLevel);
+        //    Assert.AreEqual(_character.Alive, true);
+        //    Assert.AreNotEqual(_character.Alive, false);
+        //    Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
+        //}
+
+        private class IFaction : Faction
+        {
+            public override string Name { get; }
+
+            public IFaction(string nome)
+            {
+                Name = nome;
+            }
         }
     }
 }
