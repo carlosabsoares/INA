@@ -12,4 +12,3 @@ D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Service\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Service.csproj.CopyComplete
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Service\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Service.dll
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Service\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Service.genruntimeconfig.cache
-D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\.vs\RPGCombatKata\v16\lut\14432\i\RPGCombatKataTest.Domain.Service\Debug\netcoreapp3.1\RPGCombatKataTest.Domain.Service.csprojAssemblyReference.cache

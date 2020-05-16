@@ -82,6 +82,7 @@ namespace RPGCombatKata.Domain.Service
             {
                 if(_character == character)
                 {
+
                     character.DownHealth(character.InitialHealth);
                 }
                 else
@@ -98,7 +99,7 @@ namespace RPGCombatKata.Domain.Service
                     throw new Exception("We cant cure a dead character.");
 
                 if ((_character != character))
-                    throw new Exception("One character cant heal another character.");
+                    throw new Exception("A character can only heal characters of his own faction.");
             }
         }
 

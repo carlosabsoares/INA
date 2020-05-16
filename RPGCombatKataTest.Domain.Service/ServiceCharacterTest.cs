@@ -168,7 +168,7 @@ namespace RPGCombatKataTest.Domain.Service
             catch (Exception ex)
             {
                 Assert.IsNotNull(ex);
-                AssertFailedException.Equals(ex.Message, "One character cant heal another character.");
+                AssertFailedException.Equals(ex.Message, "A character can only heal characters of his own faction.");
 
                 _character.DownHealth(_newHealth);
 
@@ -407,37 +407,79 @@ namespace RPGCombatKataTest.Domain.Service
             Assert.AreEqual(_otherCharacter.KindOfFighter, TypeOfFighter.Melee);
         }
 
-        //[TestMethod]
-        //[TestCategory("ServiceCharacter")]
-        //public void validaCuraFeitaPersonagemParaOutroComSucesso()
-        //{
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void validaCuraFeitaPersonagemParaOutroComSucesso()
+        {
 
-        //    string _nameFaction = "Warriors";
-        //    string _otherNameFaction = "Raptors";
+            string _nameFaction = "Warriors";
+            string _otherNameFaction = "Raptors";
 
-        //    _character.JoinFaction(new IFaction(_nameFaction));
+            _character.JoinFaction(new IFaction(_nameFaction));
 
-        //    string otherName = "OtherPerson";
-        //    var _potenciaAtaque = 10;
+            string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
 
-        //    var _otherCharacter = new Character() { Name = otherName };
-        //    _otherCharacter.JoinFaction(new IFaction(_nameFaction));
+            var _otherCharacter = new Character() { Name = otherName };
+            _otherCharacter.JoinFaction(new IFaction(_nameFaction));
 
-        //    var serviceCharacter = new ServiceCharacter(_character);
+            var serviceCharacter = new ServiceCharacter(_character);
 
-        //    var _newHealth = 1000;
+            var _newHealth = 1000;
 
-        //    _character.UpHealth(_newHealth);
+            _character.UpHealth(_newHealth);
 
 
-        //    serviceCharacter.BeCure(_otherCharacter);
+            serviceCharacter.BeCure(_otherCharacter);
 
-        //    Assert.AreEqual(_character.Health, _originalHealt);
-        //    Assert.AreEqual(_character.Level, _originalLevel);
-        //    Assert.AreEqual(_character.Alive, true);
-        //    Assert.AreNotEqual(_character.Alive, false);
-        //    Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
-        //}
+            Assert.AreEqual(_character.Health, _originalHealt);
+            Assert.AreEqual(_character.Level, _originalLevel);
+            Assert.AreEqual(_character.Alive, true);
+            Assert.AreNotEqual(_character.Alive, false);
+            Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
+        }
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void validaCuraFeitaPersonagemParaOutroSemSucesso()
+        {
+
+            string _nameFaction = "Warriors";
+            string _otherNameFaction = "Raptors";
+
+            _character.JoinFaction(new IFaction(_nameFaction));
+
+            string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
+
+            var _otherCharacter = new Character() { Name = otherName };
+            _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            var _newHealth = 1000;
+
+            _character.UpHealth(_newHealth);
+
+            try
+            {
+                serviceCharacter.BeCure(_otherCharacter);
+            }
+            catch (Exception ex)
+            {
+                Assert.IsNotNull(ex);
+                AssertFailedException.Equals(ex.Message, "A character can only heal characters of his own faction.");
+
+                _character.DownHealth(_newHealth);
+
+                Assert.AreEqual(_character.Health, _originalHealt);
+                Assert.AreEqual(_character.Level, _originalLevel);
+                Assert.AreEqual(_character.Alive, true);
+                Assert.AreNotEqual(_character.Alive, false);
+                Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
+
+            }
+        }
 
         private class IFaction : Faction
         {
