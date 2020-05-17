@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RPGCombatKata.Domain.Entities
 {
-    public class Character: IHealth
+    public class Character : IHealth
     {
         public string Name { get; set; }
         public int Position { get; set; }
@@ -15,14 +15,12 @@ namespace RPGCombatKata.Domain.Entities
         public IList<Faction> Factions { get; }
         public int InitialHealth { get; private set; }
 
-
         public TypeOfFighter KindOfFighter { get; private set; }
 
         private readonly int _initialHealth = 1000;
         private readonly int _initialLevel = 1;
         private readonly bool _alive = true;
         private readonly int _initialPosition = 1;
-
 
         public Character(TypeOfFighter typeOfFighter = TypeOfFighter.Melee)
         {
@@ -34,7 +32,6 @@ namespace RPGCombatKata.Domain.Entities
             Factions = new List<Faction>();
 
             InitialHealth = _initialHealth;
-
         }
 
         public void JoinFaction(Faction faction)
@@ -88,6 +85,4 @@ namespace RPGCombatKata.Domain.Entities
             }
         }
     }
-
-
 }

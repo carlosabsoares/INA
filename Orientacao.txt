@@ -1,4 +1,7 @@
 Observações
+	Esturura da aplicação
+	* Foi mantida a pastas em branco do estrutura DDD para que fique claro em qual camada foi implementada a solução
+
 	Level
 	* A cada mil pontos de energia, o personagem sobe um nível
 

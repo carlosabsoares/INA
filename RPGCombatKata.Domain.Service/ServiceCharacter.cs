@@ -3,8 +3,6 @@ using RPGCombatKata.Domain.Entities;
 using System;
 using System.Linq;
 
-
-
 namespace RPGCombatKata.Domain.Service
 {
     public class ServiceCharacter : IServiceCharacter
@@ -43,7 +41,7 @@ namespace RPGCombatKata.Domain.Service
         {
             bool _retorno = false;
 
-            if ((_character != opponent) && 
+            if ((_character != opponent) &&
                 ValidatePositionAttack(opponent) &&
                 (!ValidateFaction(opponent))
                 )
@@ -54,16 +52,14 @@ namespace RPGCombatKata.Domain.Service
 
         private bool ValidateFaction(Character opponent)
         {
-
             bool _retorno = false;
 
-            var teste = opponent.Factions.Where( x=> _character.Factions.Any( c => c.Name == x.Name));
+            var teste = opponent.Factions.Where(x => _character.Factions.Any(c => c.Name == x.Name));
 
             if (teste.Count() > 0)
                 _retorno = true;
 
             return _retorno;
-
         }
 
         private bool ValidatePositionAttack(Character opponent)
@@ -74,7 +70,7 @@ namespace RPGCombatKata.Domain.Service
 
             if (posicaoAtacante >= opponent.Position)
                 _retorno = true;
-            
+
             return _retorno;
         }
 
@@ -82,9 +78,8 @@ namespace RPGCombatKata.Domain.Service
         {
             if (ValidateCure(character))
             {
-                if(_character == character)
+                if (_character == character)
                 {
-
                     character.DownHealth(character.InitialHealth);
                 }
                 else
@@ -92,8 +87,6 @@ namespace RPGCombatKata.Domain.Service
                     character.UpHealth(character.InitialHealth);
                     _character.DownHealth(character.InitialHealth);
                 }
-                    
-
             }
             else
             {
@@ -119,19 +112,17 @@ namespace RPGCombatKata.Domain.Service
 
         public void MakeAttack(int powerful, object opponent)
         {
-
-            if(opponent is Character)
+            if (opponent is Character)
             {
                 var opponetChar = (Character)opponent;
 
                 MakeAttackCharacter(powerful, opponetChar);
-
-            }else if (opponent is Objects)
+            }
+            else if (opponent is Objects)
             {
                 var opponetObj = (Objects)opponent;
                 MakeAttackObjects(powerful, opponetObj);
             }
-
         }
 
         private void MakeAttackCharacter(int powerful, Character opponent)
@@ -150,7 +141,6 @@ namespace RPGCombatKata.Domain.Service
 
                 if (!ValidateFaction(opponent))
                     throw new Exception("You cant attack yours allies.");
-
             }
         }
 
@@ -184,6 +174,5 @@ namespace RPGCombatKata.Domain.Service
 
             return _demagePowerful;
         }
-
     }
 }

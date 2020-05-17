@@ -1,8 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RPGCombatKata.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RPGCombatKataTest.Domain.Entities
 {
@@ -17,9 +14,8 @@ namespace RPGCombatKataTest.Domain.Entities
 
             Objects _objects = new Objects(_originalHealth);
 
-            Assert.AreEqual(_objects.Health,_originalHealth);
+            Assert.AreEqual(_objects.Health, _originalHealth);
             Assert.IsFalse(_objects.Destroyed);
-
         }
 
         [TestMethod]
@@ -35,7 +31,6 @@ namespace RPGCombatKataTest.Domain.Entities
 
             Assert.AreEqual(_objects.Health, (_originalHealth - _powerDown));
             Assert.IsFalse(_objects.Destroyed);
-
         }
 
         [TestMethod]
@@ -51,7 +46,6 @@ namespace RPGCombatKataTest.Domain.Entities
 
             Assert.AreEqual(_objects.Health, (_originalHealth - _powerDown));
             Assert.IsTrue(_objects.Destroyed);
-
         }
     }
 }

@@ -42,7 +42,6 @@ namespace RPGCombatKataTest.Domain.Entities
             var character = new Character() { Name = _name };
             var _gangs = new IFaction(_nomeFaction);
 
-
             character.JoinFaction(_gangs);
 
             Assert.AreEqual(character.Name, _name);
@@ -69,7 +68,6 @@ namespace RPGCombatKataTest.Domain.Entities
             var character = new Character() { Name = _name };
             var _gangs = new IFaction(_nomeFaction);
 
-
             character.JoinFaction(_gangs);
             character.LeaveFaction(_gangs);
 
@@ -77,7 +75,7 @@ namespace RPGCombatKataTest.Domain.Entities
             Assert.AreEqual(character.Health, _health);
             Assert.AreEqual(character.Level, _level);
             Assert.AreEqual(character.Alive, _alive);
-            Assert.AreEqual(character.Factions.Count,0);
+            Assert.AreEqual(character.Factions.Count, 0);
             Assert.AreNotEqual(character.Alive, false);
             Assert.AreEqual(character.KindOfFighter, TypeOfFighter.Melee);
             Assert.AreNotEqual(character.KindOfFighter, TypeOfFighter.Ranged);
@@ -138,6 +136,5 @@ namespace RPGCombatKataTest.Domain.Entities
                 Name = nome;
             }
         }
-
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RPGCombatKata.Domain
+﻿namespace RPGCombatKata.Domain
 {
     public interface IHealth
     {

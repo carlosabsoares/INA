@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RPGCombatKata.Domain.Enums
+﻿namespace RPGCombatKata.Domain.Enums
 {
     public enum TypeOfFighter
     {

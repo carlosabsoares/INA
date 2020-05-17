@@ -260,7 +260,7 @@ namespace RPGCombatKataTest.Domain.Service
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
 
-            var _otherCharacter = new Character() { Name = otherName , Position = 30 };
+            var _otherCharacter = new Character() { Name = otherName, Position = 30 };
             var _newHealth = 5000;
 
             _character.UpHealth(_newHealth);
@@ -273,7 +273,6 @@ namespace RPGCombatKataTest.Domain.Service
             }
             catch (Exception ex)
             {
-
                 Assert.IsNotNull(ex);
                 AssertFailedException.Equals(ex.Message, "Opponent out of reach.");
                 Assert.AreEqual(_otherCharacter.Health, _originalHealt);
@@ -291,7 +290,7 @@ namespace RPGCombatKataTest.Domain.Service
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
 
-            var _otherCharacter = new Character(TypeOfFighter.Ranged) { Name = otherName, Position = 30};
+            var _otherCharacter = new Character(TypeOfFighter.Ranged) { Name = otherName, Position = 30 };
             var _newHealth = 5000;
 
             _character.UpHealth(_newHealth);
@@ -304,7 +303,6 @@ namespace RPGCombatKataTest.Domain.Service
             }
             catch (Exception ex)
             {
-
                 Assert.IsNotNull(ex);
                 AssertFailedException.Equals(ex.Message, "Opponent out of reach.");
                 Assert.AreEqual(_otherCharacter.Health, _originalHealt);
@@ -335,9 +333,7 @@ namespace RPGCombatKataTest.Domain.Service
             Assert.AreEqual(_otherCharacter.Alive, true);
             Assert.AreNotEqual(_otherCharacter.Alive, false);
             Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Ranged);
-
         }
-
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
@@ -366,7 +362,6 @@ namespace RPGCombatKataTest.Domain.Service
             }
             catch (Exception ex)
             {
-
                 Assert.IsNotNull(ex);
                 AssertFailedException.Equals(ex.Message, "You cant attack yours allies.");
                 Assert.AreEqual(_otherCharacter.Health, _originalHealt);
@@ -411,14 +406,11 @@ namespace RPGCombatKataTest.Domain.Service
         [TestCategory("ServiceCharacter")]
         public void ValidaCuraFeitaPersonagemParaOutroComSucesso()
         {
-
             string _nameFaction = "Warriors";
-            string _otherNameFaction = "Raptors";
 
             _character.JoinFaction(new IFaction(_nameFaction));
 
             string otherName = "OtherPerson";
-            var _potenciaAtaque = 10;
 
             var _otherCharacter = new Character() { Name = otherName };
             _otherCharacter.JoinFaction(new IFaction(_nameFaction));
@@ -428,7 +420,6 @@ namespace RPGCombatKataTest.Domain.Service
             var _newHealth = 1000;
 
             _character.UpHealth(_newHealth);
-
 
             serviceCharacter.BeCure(_otherCharacter);
 
@@ -443,14 +434,12 @@ namespace RPGCombatKataTest.Domain.Service
         [TestCategory("ServiceCharacter")]
         public void ValidaCuraFeitaPersonagemParaOutroSemSucesso()
         {
-
             string _nameFaction = "Warriors";
             string _otherNameFaction = "Raptors";
 
             _character.JoinFaction(new IFaction(_nameFaction));
 
             string otherName = "OtherPerson";
-            var _potenciaAtaque = 10;
 
             var _otherCharacter = new Character() { Name = otherName };
             _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
@@ -477,7 +466,6 @@ namespace RPGCombatKataTest.Domain.Service
                 Assert.AreEqual(_character.Alive, true);
                 Assert.AreNotEqual(_character.Alive, false);
                 Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
-
             }
         }
 
@@ -497,15 +485,13 @@ namespace RPGCombatKataTest.Domain.Service
             serviceCharacter.MakeAttack(_potenciaAtaque, _object);
 
             Assert.AreEqual(_object.Health, (_originalHealt - _potenciaAtaque));
-            Assert.AreEqual(_object.Destroyed,false);
-
+            Assert.AreEqual(_object.Destroyed, false);
         }
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
         public void ValidaAtaqueFeitoAUmObjetoSemSucesso()
         {
-
             var _potenciaAtaque = 10;
 
             var _object = new Objects(_originalHealt);
@@ -524,7 +510,6 @@ namespace RPGCombatKataTest.Domain.Service
                 AssertFailedException.Equals(ex.Message, "Object is already destroyed.");
 
                 Assert.AreEqual(_object.Destroyed, true);
-
             }
         }
 
@@ -532,7 +517,6 @@ namespace RPGCombatKataTest.Domain.Service
         [TestCategory("ServiceCharacter")]
         public void ValidaAtaqueFeitoAUmObjetoDestuindo()
         {
-
             var _potenciaAtaque = _originalHealt;
 
             var _object = new Objects(_originalHealt);
@@ -543,7 +527,6 @@ namespace RPGCombatKataTest.Domain.Service
 
             Assert.AreEqual(_object.Destroyed, true);
             Assert.AreEqual(_object.Health, 0);
-
         }
 
         private class IFaction : Faction
