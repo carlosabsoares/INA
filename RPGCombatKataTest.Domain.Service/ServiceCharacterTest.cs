@@ -342,17 +342,17 @@ namespace RPGCombatKataTest.Domain.Service
             string _nameFaction = "Warriors";
             string _otherNameFaction = "Raptors";
 
-            _character.JoinFaction(new IFaction(_nameFaction));
+            _character.JoinFaction(new AbsFaction(_nameFaction));
 
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
 
             var _otherCharacter = new Character() { Name = otherName };
 
-            _otherCharacter.JoinFaction(new IFaction(_nameFaction));
-            _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
+            _otherCharacter.JoinFaction(new AbsFaction(_nameFaction));
+            _otherCharacter.JoinFaction(new AbsFaction(_otherNameFaction));
 
-            _otherCharacter.LeaveFaction(new IFaction(_otherNameFaction));
+            _otherCharacter.LeaveFaction(new AbsFaction(_otherNameFaction));
 
             var serviceCharacter = new ServiceCharacter(_character);
 
@@ -380,13 +380,13 @@ namespace RPGCombatKataTest.Domain.Service
             string _nameFaction = "Warriors";
             string _otherNameFaction = "Raptors";
 
-            _character.JoinFaction(new IFaction(_nameFaction));
+            _character.JoinFaction(new AbsFaction(_nameFaction));
 
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
 
             var _otherCharacter = new Character() { Name = otherName };
-            _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
+            _otherCharacter.JoinFaction(new AbsFaction(_otherNameFaction));
 
             var serviceCharacter = new ServiceCharacter(_character);
 
@@ -408,12 +408,12 @@ namespace RPGCombatKataTest.Domain.Service
         {
             string _nameFaction = "Warriors";
 
-            _character.JoinFaction(new IFaction(_nameFaction));
+            _character.JoinFaction(new AbsFaction(_nameFaction));
 
             string otherName = "OtherPerson";
 
             var _otherCharacter = new Character() { Name = otherName };
-            _otherCharacter.JoinFaction(new IFaction(_nameFaction));
+            _otherCharacter.JoinFaction(new AbsFaction(_nameFaction));
 
             var serviceCharacter = new ServiceCharacter(_character);
 
@@ -437,12 +437,12 @@ namespace RPGCombatKataTest.Domain.Service
             string _nameFaction = "Warriors";
             string _otherNameFaction = "Raptors";
 
-            _character.JoinFaction(new IFaction(_nameFaction));
+            _character.JoinFaction(new AbsFaction(_nameFaction));
 
             string otherName = "OtherPerson";
 
             var _otherCharacter = new Character() { Name = otherName };
-            _otherCharacter.JoinFaction(new IFaction(_otherNameFaction));
+            _otherCharacter.JoinFaction(new AbsFaction(_otherNameFaction));
 
             var serviceCharacter = new ServiceCharacter(_character);
 
@@ -529,11 +529,11 @@ namespace RPGCombatKataTest.Domain.Service
             Assert.AreEqual(_object.Health, 0);
         }
 
-        private class IFaction : Faction
+        private class AbsFaction : Faction
         {
             public override string Name { get; }
 
-            public IFaction(string nome)
+            public AbsFaction(string nome)
             {
                 Name = nome;
             }

@@ -11,16 +11,16 @@ namespace RPGCombatKataTest.Domain.Entities
         public void ValidaCriacaoDeFaccao()
         {
             string _nomeFaction = "Titans";
-            var _gangs = new IFaction(_nomeFaction);
+            var _gangs = new AbsFaction(_nomeFaction);
 
             Assert.AreEqual(_gangs.Name, _nomeFaction);
         }
 
-        private class IFaction : Faction
+        private class AbsFaction : Faction
         {
             public override string Name { get; }
 
-            public IFaction(string nome)
+            public AbsFaction(string nome)
             {
                 Name = nome;
             }

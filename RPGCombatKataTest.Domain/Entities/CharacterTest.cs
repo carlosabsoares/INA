@@ -40,7 +40,7 @@ namespace RPGCombatKataTest.Domain.Entities
             int _level = 1;
 
             var character = new Character() { Name = _name };
-            var _gangs = new IFaction(_nomeFaction);
+            var _gangs = new AbsFaction(_nomeFaction);
 
             character.JoinFaction(_gangs);
 
@@ -66,7 +66,7 @@ namespace RPGCombatKataTest.Domain.Entities
             int _level = 1;
 
             var character = new Character() { Name = _name };
-            var _gangs = new IFaction(_nomeFaction);
+            var _gangs = new AbsFaction(_nomeFaction);
 
             character.JoinFaction(_gangs);
             character.LeaveFaction(_gangs);
@@ -127,11 +127,11 @@ namespace RPGCombatKataTest.Domain.Entities
             Assert.AreNotEqual(character.KindOfFighter, TypeOfFighter.Ranged);
         }
 
-        private class IFaction : Faction
+        private class AbsFaction : Faction
         {
             public override string Name { get; }
 
-            public IFaction(string nome)
+            public AbsFaction(string nome)
             {
                 Name = nome;
             }
