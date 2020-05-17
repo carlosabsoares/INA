@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PXUq1xke0n7/Z0JNGRR0JZxmgxtzhD3oc8Zl5IwWNpfCxfj5+1O0gF97aHZgQqVU+O5o6Y2a/2tZTbQ8HCv+xg==",
+  "dgSpecHash": "zmIIk0GisNghVcy4AjEBRG5EHWtc9NsZ7rrRUBBFGTGB4i4BIm9DTUpG0vzls49PzNS4jN59/sAIiwCLRM8UXA==",
   "success": true,
   "projectFilePath": "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKata.Domain.Service\\RPGCombatKata.Domain.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],

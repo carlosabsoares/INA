@@ -1,9 +1,9 @@
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\bin\Debug\netstandard2.0\RPGCombatKata.Domain.deps.json
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\bin\Debug\netstandard2.0\RPGCombatKata.Domain.dll
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\bin\Debug\netstandard2.0\RPGCombatKata.Domain.pdb
-D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.csprojAssemblyReference.cache
-D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.csproj.CoreCompileInputs.cache
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.AssemblyInfoInputs.cache
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.AssemblyInfo.cs
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.dll
 D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.pdb
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.csproj.CoreCompileInputs.cache
+D:\Beto\Prova\IdeiaNoAr\TesteTecnicoParteI_SOLID\Fontes_Parte_II\RPGCombatKata\RPGCombatKata.Domain\obj\Debug\netstandard2.0\RPGCombatKata.Domain.csprojAssemblyReference.cache

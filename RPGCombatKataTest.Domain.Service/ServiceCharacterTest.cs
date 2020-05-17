@@ -16,7 +16,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemContraOutroPersonagem()
+        public void ValidaAtaqueFeitoPersonagemContraOutroPersonagem()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -39,7 +39,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemContraOMesmoPersonagem()
+        public void ValidaAtaqueFeitoPersonagemContraOMesmoPersonagem()
         {
             var _otherCharacter = new Character();
 
@@ -65,7 +65,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueSofridoPersonagemPorOutroPersonagem()
+        public void ValidaAtaqueSofridoPersonagemPorOutroPersonagem()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -85,7 +85,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueSofridoPersonagemPorOutroPersonagemComMorte()
+        public void ValidaAtaqueSofridoPersonagemPorOutroPersonagemComMorte()
         {
             string otherName = "OtherPerson";
 
@@ -105,7 +105,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueSofridoPersonagemPeloMesmoPersonagem()
+        public void ValidaAtaqueSofridoPersonagemPeloMesmoPersonagem()
         {
             var _potenciaAtaque = 10;
 
@@ -130,7 +130,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaCuraFeitaPeloProprioPersonagemComSucesso()
+        public void ValidaCuraFeitaPeloProprioPersonagemComSucesso()
         {
             var _newHealth = 1000;
 
@@ -149,7 +149,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaCuraFeitaPeloProprioPersonagemComErro()
+        public void ValidaCuraFeitaPeloProprioPersonagemComErro()
         {
             string otherName = "OtherPerson";
 
@@ -182,7 +182,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaCuraFeitaPeloProprioPersonagemQueEstaMortoComErro()
+        public void ValidaCuraFeitaPeloProprioPersonagemQueEstaMortoComErro()
         {
             var _newHealth = 1000;
 
@@ -209,7 +209,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemPorOutroPersonagemNivel5VezesMaior()
+        public void ValidaAtaqueFeitoPersonagemPorOutroPersonagemNivel5VezesMaior()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -232,7 +232,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemPorOutroPersonagemNivel5VezesMenor()
+        public void ValidaAtaqueFeitoPersonagemPorOutroPersonagemNivel5VezesMenor()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -255,7 +255,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemPorOutroPersonagemMeleeForaAlcance()
+        public void ValidaAtaqueFeitoPersonagemPorOutroPersonagemMeleeForaAlcance()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -286,7 +286,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemPorOutroPersonagemRangedForaAlcance()
+        public void ValidaAtaqueFeitoPersonagemPorOutroPersonagemRangedForaAlcance()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -317,7 +317,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemPorOutroPersonagemRangedDentroAlcance()
+        public void ValidaAtaqueFeitoPersonagemPorOutroPersonagemRangedDentroAlcance()
         {
             string otherName = "OtherPerson";
             var _potenciaAtaque = 10;
@@ -341,7 +341,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemContraOutroPersonagemDiferenteFacao()
+        public void ValidaAtaqueFeitoPersonagemContraOutroPersonagemDiferenteFacao()
         {
             string _nameFaction = "Warriors";
             string _otherNameFaction = "Raptors";
@@ -380,7 +380,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaAtaqueFeitoPersonagemContraOutroPersonagemMesmaFacao()
+        public void ValidaAtaqueFeitoPersonagemContraOutroPersonagemMesmaFacao()
         {
             string _nameFaction = "Warriors";
             string _otherNameFaction = "Raptors";
@@ -409,7 +409,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaCuraFeitaPersonagemParaOutroComSucesso()
+        public void ValidaCuraFeitaPersonagemParaOutroComSucesso()
         {
 
             string _nameFaction = "Warriors";
@@ -441,7 +441,7 @@ namespace RPGCombatKataTest.Domain.Service
 
         [TestMethod]
         [TestCategory("ServiceCharacter")]
-        public void validaCuraFeitaPersonagemParaOutroSemSucesso()
+        public void ValidaCuraFeitaPersonagemParaOutroSemSucesso()
         {
 
             string _nameFaction = "Warriors";
@@ -479,6 +479,71 @@ namespace RPGCombatKataTest.Domain.Service
                 Assert.AreEqual(_character.KindOfFighter, TypeOfFighter.Melee);
 
             }
+        }
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void ValidaAtaqueFeitoAUmObjetoComSucesso()
+        {
+            //string otherName = "OtherPerson";
+            var _potenciaAtaque = 10;
+
+            var _object = new Objects(_originalHealt);
+
+            //var _otherCharacter = new Character() { Name = otherName };
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            serviceCharacter.MakeAttack(_potenciaAtaque, _object);
+
+            Assert.AreEqual(_object.Health, (_originalHealt - _potenciaAtaque));
+            Assert.AreEqual(_object.Destroyed,false);
+
+        }
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void ValidaAtaqueFeitoAUmObjetoSemSucesso()
+        {
+
+            var _potenciaAtaque = 10;
+
+            var _object = new Objects(_originalHealt);
+
+            _object.DownHealth(_originalHealt);
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            try
+            {
+                serviceCharacter.MakeAttack(_potenciaAtaque, _object);
+            }
+            catch (Exception ex)
+            {
+                Assert.IsNotNull(ex);
+                AssertFailedException.Equals(ex.Message, "Object is already destroyed.");
+
+                Assert.AreEqual(_object.Destroyed, true);
+
+            }
+        }
+
+        [TestMethod]
+        [TestCategory("ServiceCharacter")]
+        public void ValidaAtaqueFeitoAUmObjetoDestuindo()
+        {
+
+            var _potenciaAtaque = _originalHealt;
+
+            var _object = new Objects(_originalHealt);
+
+            var serviceCharacter = new ServiceCharacter(_character);
+
+            serviceCharacter.MakeAttack(_potenciaAtaque, _object);
+
+            Assert.AreEqual(_object.Destroyed, true);
+            Assert.AreEqual(_object.Health, 0);
+
         }
 
         private class IFaction : Faction

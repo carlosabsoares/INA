@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "c9hx6s+mjLPBgBIxphMcwbnkPDM2eo/8IJ95bcC9mhIs7sB9VM5HJ6U9mQppMsBuwcOpeBkZ+HP7+5nnaRWZlw==",
+  "dgSpecHash": "YrSRnGh5w+a693nSiLMW1HHJOIe3HocpfDM7zGPRIZ/Cjqr95W+Tsjh5RrSOK42W6bRrfOhmUh/Mm5I9uk1x9w==",
   "success": true,
   "projectFilePath": "D:\\Beto\\Prova\\IdeiaNoAr\\TesteTecnicoParteI_SOLID\\Fontes_Parte_II\\RPGCombatKata\\RPGCombatKataTest.Domain\\RPGCombatKataTest.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.codecoverage\\16.7.0-preview-20200428-01\\microsoft.codecoverage.16.7.0-preview-20200428-01.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.net.test.sdk\\16.7.0-preview-20200428-01\\microsoft.net.test.sdk.16.7.0-preview-20200428-01.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

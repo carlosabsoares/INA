@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RPGCombatKata.Domain.Entities
 {
-    public class Character
+    public class Character: IHealth
     {
         public string Name { get; set; }
         public int Position { get; set; }
@@ -14,7 +14,6 @@ namespace RPGCombatKata.Domain.Entities
         public bool Alive { get; private set; }
         public IList<Faction> Factions { get; }
         public int InitialHealth { get; private set; }
-
 
 
         public TypeOfFighter KindOfFighter { get; private set; }
@@ -46,16 +45,6 @@ namespace RPGCombatKata.Domain.Entities
         public void LeaveFaction(Faction faction)
         {
             Factions.Remove(faction);
-        }
-
-        public void DownLevel(int down)
-        {
-            Level -= down;
-        }
-
-        public void UpLevel(int up)
-        {
-            Level += up;
         }
 
         public void DownHealth(int down)

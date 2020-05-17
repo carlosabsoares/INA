@@ -3,6 +3,8 @@ using RPGCombatKata.Domain.Entities;
 using System;
 using System.Linq;
 
+
+
 namespace RPGCombatKata.Domain.Service
 {
     public class ServiceCharacter : IServiceCharacter
@@ -115,7 +117,24 @@ namespace RPGCombatKata.Domain.Service
             }
         }
 
-        public void MakeAttack(int powerful, Character opponent)
+        public void MakeAttack(int powerful, object opponent)
+        {
+
+            if(opponent is Character)
+            {
+                var opponetChar = (Character)opponent;
+
+                MakeAttackCharacter(powerful, opponetChar);
+
+            }else if (opponent is Objects)
+            {
+                var opponetObj = (Objects)opponent;
+                MakeAttackObjects(powerful, opponetObj);
+            }
+
+        }
+
+        private void MakeAttackCharacter(int powerful, Character opponent)
         {
             if (ValidateMakeAttack(powerful, opponent))
             {
@@ -126,12 +145,24 @@ namespace RPGCombatKata.Domain.Service
                 if (_character == opponent)
                     throw new Exception("You cant attack yourself.");
 
-                if(!ValidatePositionAttack(opponent))
+                if (!ValidatePositionAttack(opponent))
                     throw new Exception("Opponent out of reach.");
 
                 if (!ValidateFaction(opponent))
                     throw new Exception("You cant attack yours allies.");
 
+            }
+        }
+
+        private void MakeAttackObjects(int powerful, Objects opponent)
+        {
+            if (!opponent.Destroyed)
+            {
+                opponent.DownHealth(powerful);
+            }
+            else
+            {
+                throw new Exception("Object is already destroyed.");
             }
         }
 
@@ -153,5 +184,6 @@ namespace RPGCombatKata.Domain.Service
 
             return _demagePowerful;
         }
+
     }
 }

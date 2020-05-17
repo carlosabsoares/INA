@@ -9,4 +9,10 @@
     <ProjectReference Include="..\RPGCombatKata.Domain\RPGCombatKata.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
